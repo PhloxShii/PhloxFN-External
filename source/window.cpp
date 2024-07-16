@@ -147,7 +147,7 @@ void Overlay::CreateOverlay()
 	RegisterClassEx(&wc);
 
 	overlay = CreateWindowEx(
-		WS_EX_TOPMOST | WS_EX_TRANSPARENT | WS_EX_LAYERED | WS_EX_TOOLWINDOW,
+		WS_EX_TOPMOST | WS_EX_LAYERED | WS_EX_TOOLWINDOW,
 		wc.lpszClassName,
 		L"cheat",
 		WS_POPUP,
@@ -242,11 +242,11 @@ void Overlay::StartRender()
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
 
-	if (GetAsyncKeyState(VK_NUMPAD0) & 1) {
+	if (GetAsyncKeyState(VK_OEM_3) & 1) {
 		RenderMenu = !RenderMenu;
 
 		if (RenderMenu) {
-			SetWindowLong(overlay, GWL_EXSTYLE, WS_EX_TOOLWINDOW | WS_EX_TRANSPARENT);
+			SetWindowLong(overlay, GWL_EXSTYLE, WS_EX_TOOLWINDOW);
 		}
 		else {
 			SetWindowLong(overlay, GWL_EXSTYLE, WS_EX_TOOLWINDOW | WS_EX_TRANSPARENT | WS_EX_TOPMOST | WS_EX_LAYERED);

@@ -17,7 +17,7 @@ int main()
 	overlay.CreateDevice();
 	overlay.CreateImGui();
 
-	printf("[>>] Hit NUM0 to show the menu in this overlay!/n");
+	printf("[>>] Press ~ to show the menu!/n");
 
 	overlay.SetForeground(GetConsoleWindow());
 
@@ -31,7 +31,7 @@ int main()
 			overlay.Render();
 		}
 		else
-		ImGui::GetBackgroundDrawList()->AddText({ 0, 0 }, ImColor(245.0f, 0.0f, 31.0f), "PhloxFN by @yophlox on Github - Press NUM0 to use");
+		ImGui::GetBackgroundDrawList()->AddText({ 0, 0 }, ImColor(245.0f, 0.0f, 31.0f), "PhloxFN by @yophlox on Github - Press ~ to use");
 
 		if (drawCrosshair) 
         {
