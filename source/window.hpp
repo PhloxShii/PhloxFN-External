@@ -1,9 +1,12 @@
 #pragma once
 #include <d3d11.h>
-
 #include "imgui.h"
 #include "imgui_impl_dx11.h"
 #include "imgui_impl_win32.h"
+#include <dwmapi.h>
+#pragma comment(lib, "d3d11.lib")
+#pragma comment(lib, "dxgi.lib")
+#pragma comment(lib, "dwmapi.lib")
 
 class Overlay {
 public:
