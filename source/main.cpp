@@ -37,8 +37,8 @@ int main()
         {
 			ImVec2 screenSize = ImGui::GetIO().DisplaySize;
 			ImVec2 center(screenSize.x * 0.5f, screenSize.y * 0.5f);
-			ImGui::GetForegroundDrawList()->AddLine(ImVec2(center.x - 20, center.y), ImVec2(center.x + 20, center.y), IM_COL32(57, 255, 20, 220), 0.3f);
-			ImGui::GetForegroundDrawList()->AddLine(ImVec2(center.x, center.y - 20), ImVec2(center.x, center.y + 20), IM_COL32(57, 255, 20, 220), 0.3f);
+			ImGui::GetForegroundDrawList()->AddLine(ImVec2(center.x - 20, center.y - 10), ImVec2(center.x + 20, center.y - 32), IM_COL32(57, 255, 20, 220), 0.3f);
+			ImGui::GetForegroundDrawList()->AddLine(ImVec2(center.x, center.y - 32), ImVec2(center.x, center.y + 10), IM_COL32(57, 255, 20, 220), 0.3f);
 		}
 		if (showEsp) 
         {
