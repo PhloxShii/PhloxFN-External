@@ -6,6 +6,8 @@
 
 * nun was done besides the crosshair lol
 
+* Use VS2019 to compile
+
 # Creds
 
 * YoPhlox - Code
